@@ -9,9 +9,8 @@
 #include <dt-bindings/zmk/bt.h>
 
 / {
-        keymap {
+                keymap {
                 compatible = "zmk,keymap";
-
                 default_layer {
 // -----------------------------------------------------------------------------------------
 // |  TAB |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | BSPC |
@@ -38,7 +37,6 @@
                                     &kp LGUI     &trans       &kp SPACE      &kp RET  &trans   &kp RALT
                         >;
                 };
-
                 raise_layer {
 // -----------------------------------------------------------------------------------------
 // |  TAB |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | BSPC |
@@ -53,4 +51,8 @@
                         >;
                 };
         };
+
+    chosen {
+        zmk,matrix-transform = &five_column_transform;
+    };
 };
